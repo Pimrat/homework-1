@@ -1,0 +1,152 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* สร้างตัวแปรไว้สำหรับใช้เปลี่ยน element ที่เป็นรูปแบบเดียวกันที่ใช้ได้ในทุกหน้า */
+:root {
+    --text-big : 25px;
+    --text-medium: 20px;
+    --text-small: 15px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: "Caveat", "Kanit", sans-serif; */
+    font-family: "Kalam", "Kanit", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* จัดการสไตล์เส้นกันหน้า */
+hr {
+    height: 5px;
+    background: #A7CFDF;
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    border: none;
+    margin: 0 1rem;
+}
+
+/*  Reuse Class or Element Section*/
+/* -----ส่วนที่มี element ใช้เหมือนกันสามารถนำมาใช้ร่วมกันได้-----*/
+section {
+    margin-left: 3rem;
+}
+section > h2 {
+    text-decoration: underline;
+    font-size: var(--text-big);
+}
+
+/* ---------Home Page--------- */
+/* ---------Navigation Bar--------- */
+.navbar {
+    /*ตัดจุดที่เป็น Bullet ของ li*/
+    list-style-type: none; 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: start;
+    /* สร้างสีของพื้นหลังแถบบาร์ */
+    background: #A7CFDF;
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+}
+
+/* ขยายขนาด li ใน navbar แล้วเวลาที่เม้าส์ไปชี้ให้เปลี่ยนพื้นหลังของ li และตัดที่ขีดเส้นใต้ออก*/
+.navbar li {
+    padding: 14px 30px;
+}
+.navbar li:hover {
+    background-color: azure;
+}
+.navbar li a {
+    text-decoration: none;
+}
+
+/* ---------Section Profile--------- */
+/* จัดการส่วนของ รูปภาพในหน้า index */
+.profile {
+    margin-top: 20px;
+    text-align: center;
+}
+.profile img {
+    width: 200px;
+}
+.profile h1 {
+    font-size: var(--text-big);
+    margin-bottom: 1rem;
+}
+.profile div p {
+    margin: 0 30%;
+    font-size: var(--text-medium);
+}
+
+/* ---------Section Information--------- */
+.information h3 {
+    font-size: var(--text-medium)
+}
+
+/* ---------Section Skills--------- */
+
+/* ---------Education Page--------- */
+/* ---------Section Education-Image--------- */
+.educate-img {
+    text-align: center;
+}
+.educate-img img{
+    width: 200px;
+}
+/* ---------Section Education-Table--------- */
+.educate-table {
+    width: 50%;
+    margin : 0 auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    width: 100%;
+}
+
+/* ---------Work Exp Page--------- */
+/* ---------Section Work Exp--------- */
+.work-exp {
+    font-size: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+.work-exp img {
+    width: 200px;
+}
+.work-exp-table {
+    width: 80%;
+}
+.work-exp-table th {
+    background-color: lightblue;
+}
+
+/* ---------Contact Page--------- */
+/* ---------Section Contact--------- */
+.contact {
+    font-size: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+/* ---------Section Contact Form--------- */
+.contact-form {
+    padding: 0.5rem 0.5rem;
+    margin: 1rem 0;
+    width: 35%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.contact-form fieldset {
+    padding: 1rem 0 1rem 1rem;
+    margin: 1% 0;
+    width: 100%;
+    border: 1px solid black;
+}
+.contact-form fieldset > legend {
+    font-size: var(--text-medium);
+    color: cornflowerblue;
+}
